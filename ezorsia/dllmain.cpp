@@ -2,6 +2,7 @@
 #include "stdafx.h"
 #include "ReplacementFuncs.h"
 #include "dinput8.h"
+#include "AdapterCompat.h"
 
 //NOTE: ideally order hooks by execution order in exe to best bypass themida but im lazy...
 
@@ -68,6 +69,7 @@ void MainFunc() {
 
 	std::cout << " Applying updated startup routines" << std::endl;
 	Client::UpdateGameStartup();
+	InstallAdapterCompat();
 
 	std::cout << "Applying resolution " << Client::m_nGameWidth << "x" << Client::m_nGameHeight << std::endl;
 	Client::UpdateResolution();

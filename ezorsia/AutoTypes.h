@@ -616,17 +616,6 @@ static auto _sub_46C00C = reinterpret_cast<_sub_46C00C_t>(0x0046C00C);
 typedef signed int(__thiscall* _sub_4956A6_t)(DWORD* pThis);
 static auto _sub_4956A6 = reinterpret_cast<_sub_4956A6_t>(0x004956A6);
 const DWORD dw_sub_4959B8 = 0x004959B8;
-__declspec(naked) size_t _sub_4959B8_asm(DWORD a, DWORD b, void* a2, size_t a3) {
-	__asm {
-		push a3
-		push a2
-		push ecx
-		mov ecx, b
-		push ebx
-		mov ebx, a
-		//return call dw_sub_4959B8	//returns in eax //inline assembler syntax error in 'opcode'; found 'opcode'
-	}
-}
 typedef          char   int8;
 typedef   signed char   sint8;
 typedef unsigned char   uint8;
